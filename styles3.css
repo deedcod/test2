@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+/* جعل الصفحة كلها بالنص */
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center; /* كل شي بالنص */
+    display: flex;
+    flex-direction: column; /* ترتيب عمودي */
+    align-items: center;
+}
+
+/* الصورة + اسم الشركة */
+.left {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.left .logo {
+    width: 220px;
+    display: block;
+    margin: 0 auto;
+}
+
+.brand-en {
+    color: #002b5c;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.brand-ar {
+    color: #002b5c;
+    font-size: 26px;
+    margin-top: -5px;
+}
+
+/* الروابط: واحد تحت الثاني */
+.right {
+    width: 100%;
+}
+
+.grid-buttons {
+    display: flex;
+    flex-direction: column; /* واحد تحت الثاني */
+    gap: 14px;
+    width: 100%;
+}
+
+.btn {
+    background: #002b5c;
+    color: white;
+    padding: 14px 0;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* الخط */
+.divider {
+    width: 60%;
+    height: 2px;
+    background: #002b5c;
+    margin: 30px auto;
+}
+
+/* أيقونات السوشيال */
+.social-icons {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 34px;
+    transition: 0.2s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* موبايل */
+@media (max-width: 600px) {
+
+    .left .logo {
+        width: 170px;
+    }
+
+    .brand-en {
+        font-size: 26px;
+    }
+
+    .brand-ar {
+        font-size: 22px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    .social-icons img {
+        width: 28px;
+    }
+}
+/* نهاية الموبايل */
