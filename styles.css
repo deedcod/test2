@@ -1,0 +1,188 @@
+:root {
+  --bg: #ffffff;
+  --ink: #0b2130;
+  --muted: #445a69;
+  --accent: #ff5630;
+}
+
+/* إعداد عام */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Tajawal", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* الحاوية العامة */
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* البطاقة الرئيسية */
+.mock {
+  position: relative;
+  background: var(--ink);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(11, 33, 48, 0.25);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  text-align: center;
+  padding: 50px 30px;
+}
+
+/* ✅ الصورة المركزية */
+.mock img.main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto 25px;
+}
+
+/* الشعار */
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logo img {
+  width: 120px;
+  height: auto;
+}
+.en-text, .ar-text {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 8px 0 20px;
+}
+
+/* الأزرار والروابط */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 18px;
+  margin-bottom: 25px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid var(--ink);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 16px 22px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11, 33, 48, 0.12);
+}
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* الأيقونات */
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.ico {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: 1.5px solid #fff;
+  text-decoration: none;
+  background: transparent;
+  transition: 0.3s;
+}
+.ico:hover {
+  background: #fff;
+  color: var(--ink);
+}
+.ico svg, .ico img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+/* العنوان الرئيسي خارج البطاقة */
+h1 {
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: clamp(28px, 4vw, 56px);
+  margin-bottom: 28px;
+  color: var(--ink);
+}
+
+/* ✅ تجاوب لجميع الأجهزة */
+@media (max-width: 992px) {
+  .mock {
+    padding: 40px 25px;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .en-text, .ar-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mock {
+    padding: 30px 20px;
+  }
+  .logo img {
+    width: 90px;
+  }
+  .en-text, .ar-text {
+    font-size: 1.3rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .ico {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mock {
+    padding: 25px 15px;
+  }
+  .logo img {
+    width: 80px;
+  }
+  .en-text, .ar-text {
+    font-size: 1.2rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+}
